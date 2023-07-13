@@ -18,7 +18,7 @@ async function scrapeProducts() {
 
   try {
 
-    while (minPrice <= 100000 && maxPrice <= 100000) {
+    while (minPrice <= 100000 || maxPrice <= 100000) {
 
       const responseBatch = await axios.get(apiUrl, {
         params: { minPrice, maxPrice },
